@@ -1,0 +1,525 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>iPrático — Fale Inglês Útil em 30 Dias</title>
+  <meta name="description" content="Método prático para destravar na fala em 30 dias. Aulas curtas, exercícios guiados e rotina de 15–20 min/dia. Garantia de 7 dias." />
+  <meta property="og:title" content="Fale Inglês Útil em 30 Dias" />
+  <meta property="og:description" content="Método prático para adultos ocupados. Aulas curtas, exercícios guiados e rotina de 15–20 min/dia." />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="https://images.unsplash.com/photo-1529079015405-4e069e9f8463?q=80&w=1600&auto=format&fit=crop" />
+  <meta name="theme-color" content="#0ea5e9" />
+
+  <!-- Tailwind CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- JSON-LD Schema -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Course",
+    "name": "iPrático — Inglês Prático para Iniciantes",
+    "description": "Método prático para destravar a fala com aulas curtas, exercícios guiados e rotina de 15–20 min/dia.",
+    "provider": {"@type": "Organization", "name": "iPrático (Thiago Matéria)", "sameAs": "https://hotmart.com" }
+  }
+  </script>
+
+  <style>
+    .glass { backdrop-filter: saturate(180%) blur(10px); background: rgba(255,255,255,0.55); }
+    .section { scroll-margin-top: 96px; }
+    .badge { font-size: 0.75rem; padding: 0.125rem 0.5rem; border-radius: 999px; }
+    #debug-panel[hidden] { display: none; }
+  </style>
+</head>
+<body class="bg-slate-50 text-slate-900">
+  <!-- Top Bar / Trust -->
+  <div class="w-full bg-sky-600 text-white text-sm">
+    <div class="max-w-6xl mx-auto px-4 py-2 flex items-center justify-between">
+      <p class="font-medium">Parcele em até 12x | Acesso imediato | Garantia de 7 dias</p>
+      <a href="#precos" class="underline underline-offset-2">Quero começar</a>
+    </div>
+  </div>
+
+  <!-- Header -->
+  <header class="sticky top-0 z-40 bg-white/80 backdrop-blur border-b border-slate-200">
+    <div class="max-w-6xl mx-auto px-4 py-3 flex items-center justify-between">
+      <div class="flex items-center gap-3">
+        <div class="w-9 h-9 rounded-2xl bg-sky-600"></div>
+        <span class="font-semibold">iPrático</span>
+      </div>
+      <nav class="hidden md:flex items-center gap-6 text-sm">
+        <a href="#beneficios" class="hover:text-sky-700">Benefícios</a>
+        <a href="#como-funciona" class="hover:text-sky-700">Como funciona</a>
+        <a href="#conteudo" class="hover:text-sky-700">Conteúdo</a>
+        <a href="#depoimentos" class="hover:text-sky-700">Resultados</a>
+        <a href="#faq" class="hover:text-sky-700">FAQ</a>
+      </nav>
+      <a href="#precos" class="inline-flex items-center gap-2 bg-sky-600 hover:bg-sky-700 text-white px-4 py-2 rounded-xl shadow">Começar agora</a>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section class="relative">
+    <img class="absolute inset-0 w-full h-full object-cover opacity-20" src="https://images.unsplash.com/photo-1491841651911-c44c30c34548?q=80&w=1920&auto=format&fit=crop" alt="" />
+    <div class="max-w-6xl mx-auto px-4 py-16 md:py-24 grid md:grid-cols-2 gap-10 items-center">
+      <div class="glass rounded-3xl p-6 md:p-10 shadow-xl">
+        <h1 id="headline" class="text-3xl md:text-5xl font-extrabold leading-tight">Fale inglês útil em 30 dias — com o Método iPrático</h1>
+        <p class="mt-4 text-slate-700 text-lg">Rotina curta de 15–20 min/dia, aulas práticas e exercícios guiados para você destravar na fala e usar inglês no trabalho, viagens e dia a dia.</p>
+        <ul class="mt-6 space-y-2 text-slate-800">
+          <li class="flex items-start gap-3"><span>✅</span><span>Aulas curtas com prática de fala e repetição guiada (drills)</span></li>
+          <li class="flex items-start gap-3"><span>✅</span><span>Plano semanal simples de seguir</span></li>
+          <li class="flex items-start gap-3"><span>✅</span><span>Garantia incondicional de 7 dias</span></li>
+        </ul>
+        <div class="mt-8 flex flex-wrap gap-3">
+          <a id="cta-curso" href="#precos" class="px-6 py-3 rounded-2xl bg-sky-600 hover:bg-sky-700 text-white font-semibold shadow">Quero começar</a>
+          <a href="#depoimentos" class="px-6 py-3 rounded-2xl border border-slate-300 hover:bg-white font-semibold">Ver resultados</a>
+        </div>
+        <p class="mt-3 text-xs text-slate-600">*Acesso imediato após a compra. Cancelamento fácil em 7 dias.</p>
+      </div>
+      <div class="grid grid-cols-2 gap-4 md:gap-6">
+        <img class="rounded-3xl shadow-lg object-cover aspect-[4/5]" src="https://images.unsplash.com/photo-1522071901873-411886a10004?q=80&w=800&auto=format&fit=crop" alt="Estudando no notebook" />
+        <img class="rounded-3xl shadow-lg object-cover aspect-square" src="https://images.unsplash.com/photo-1531545514256-b1400bc00f31?q=80&w=800&auto=format&fit=crop" alt="Prática de conversação" />
+        <img class="rounded-3xl shadow-lg object-cover aspect-square" src="https://images.unsplash.com/photo-1512756290469-ec264b7fbf87?q=80&w=800&auto=format&fit=crop" alt="Rotina curta" />
+        <img class="rounded-3xl shadow-lg object-cover aspect-[4/5]" src="https://images.unsplash.com/photo-1516383607781-913a19294fd1?q=80&w=800&auto=format&fit=crop" alt="Uso no trabalho" />
+      </div>
+    </div>
+  </section>
+
+  <!-- Vídeo destaque (opcional) -->
+  <section id="video" class="section max-w-6xl mx-auto px-4 py-10">
+    <div class="grid md:grid-cols-2 gap-6 items-center">
+      <div class="rounded-3xl overflow-hidden shadow bg-black">
+        <video id="video-1" class="w-full h-full" playsinline muted controls preload="metadata" poster="https://images.unsplash.com/photo-1557804483-ef3ae78eca57?w=1200&q=80&auto=format&fit=crop"></video>
+        <div class="p-3 bg-slate-900/70 text-white text-sm flex items-center justify-between">
+          <span>Carregar vídeo (MP4/WEBM)</span>
+          <div class="flex gap-2">
+            <input id="file-v1" type="file" accept="video/mp4,video/webm" class="hidden" />
+            <button type="button" id="btn-v1" class="px-3 py-1 rounded bg-sky-600 hover:bg-sky-700">Selecionar arquivo</button>
+          </div>
+        </div>
+      </div>
+      <div>
+        <h2 class="text-2xl md:text-3xl font-bold">Assista 30s do método iPrático</h2>
+        <p class="mt-3 text-slate-700">Use um dos vídeos de divulgação ou seu criativo próprio. A LP aceita vídeo via URL sem precisar mexer no código: basta adicionar <span class="font-mono bg-slate-100 px-1 rounded">?v1=URL_DO_VIDEO</span> na URL da página.</p>
+        <ul class="mt-4 text-slate-700 list-disc pl-5">
+          <li>Formatos aceitos: <span class="font-mono">.mp4</span>, <span class="font-mono">.webm</span></li>
+          <li>Carrega com <em>preload=metadata</em> para não pesar o carregamento</li>
+        </ul>
+        <div class="mt-5 flex gap-3">
+          <a href="#precos" class="px-5 py-3 rounded-2xl bg-sky-600 hover:bg-sky-700 text-white font-semibold shadow">Quero começar</a>
+          <a href="#depoimentos" class="px-5 py-3 rounded-2xl border border-slate-300 hover:bg-white font-semibold">Ver resultados</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Benefícios -->
+  <section id="beneficios" class="section max-w-6xl mx-auto px-4 py-16">
+    <h2 class="text-2xl md:text-4xl font-bold">Por que este método funciona</h2>
+    <div class="mt-8 grid md:grid-cols-3 gap-6">
+      <div class="p-6 rounded-2xl bg-white shadow border border-slate-100">
+        <h3 class="font-semibold text-lg">Foco em fala</h3>
+        <p class="mt-2 text-slate-700">Drills práticos para você perder a trava e formular frases úteis no dia a dia.</p>
+      </div>
+      <div class="p-6 rounded-2xl bg-white shadow border border-slate-100">
+        <h3 class="font-semibold text-lg">Rotina curta</h3>
+        <p class="mt-2 text-slate-700">15–20 minutos por dia, com plano semanal simples e progressivo.</p>
+      </div>
+      <div class="p-6 rounded-2xl bg-white shadow border border-slate-100">
+        <h3 class="font-semibold text-lg">Passo a passo do zero ao intermediário</h3>
+        <p class="mt-2 text-slate-700">Aulas organizadas para iniciantes até intermediário com material de apoio.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Como funciona -->
+  <section id="como-funciona" class="section bg-white/70 border-y border-slate-200">
+    <div class="max-w-6xl mx-auto px-4 py-16">
+      <h2 class="text-2xl md:text-4xl font-bold">Como funciona em 30 dias</h2>
+      <div class="mt-8 grid md:grid-cols-4 gap-6">
+        <div class="p-6 rounded-2xl bg-white shadow">
+          <span class="text-sky-600 font-bold">Semana 1</span>
+          <p class="mt-2 text-slate-700">Frases de sobrevivência e perguntas-chave para conversas básicas.</p>
+        </div>
+        <div class="p-6 rounded-2xl bg-white shadow">
+          <span class="text-sky-600 font-bold">Semana 2</span>
+          <p class="mt-2 text-slate-700">Estruturas simples para trabalho/viagens + drills de pronúncia.</p>
+        </div>
+        <div class="p-6 rounded-2xl bg-white shadow">
+          <span class="text-sky-600 font-bold">Semana 3</span>
+          <p class="mt-2 text-slate-700">Expansão de vocabulário útil e respostas rápidas.</p>
+        </div>
+        <div class="p-6 rounded-2xl bg-white shadow">
+          <span class="text-sky-600 font-bold">Semana 4</span>
+          <p class="mt-2 text-slate-700">Simulados de conversação e revisão guiada.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Conteúdo -->
+  <section id="conteudo" class="section max-w-6xl mx-auto px-4 py-16">
+    <h2 class="text-2xl md:text-4xl font-bold">O que você recebe</h2>
+    <div class="mt-8 grid md:grid-cols-2 gap-6">
+      <ul class="space-y-3 p-6 rounded-2xl bg-white shadow border border-slate-100">
+        <li>✅ Acesso completo às aulas gravadas do iPrático</li>
+        <li>✅ Exercícios guiados, PDFs e plano semanal</li>
+        <li>✅ Drills de fala focados em frases úteis</li>
+        <li>✅ Atualizações incluídas</li>
+        <li>✅ Suporte pela plataforma Hotmart</li>
+      </ul>
+      <div class="p-6 rounded-2xl bg-gradient-to-br from-sky-50 to-white border border-slate-100">
+        <h3 class="font-semibold">Bônus (se disponível pelo produtor)</h3>
+        <ul class="mt-3 space-y-2 text-slate-700">
+          <li>🎧 Áudios para treinar escuta</li>
+          <li>🗂️ Flashcards essenciais</li>
+          <li>🗣️ Roteiros de conversa</li>
+        </ul>
+        <p class="mt-4 text-xs text-slate-500">*Os bônus podem variar conforme a oferta ativa do iPrático.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Bloco de autoridade / confiança -->
+  <section class="section max-w-6xl mx-auto px-4 py-12">
+    <div class="rounded-3xl bg-white shadow border border-slate-100 p-6 md:p-8 flex flex-col md:flex-row items-center gap-6">
+      <div class="flex-1">
+        <h3 class="text-xl font-bold">Compra protegida pela Hotmart</h3>
+        <p class="mt-2 text-slate-700">Pagamento seguro, acesso imediato e <strong>garantia de 7 dias</strong>. Se não curtir, cancele sem burocracia.</p>
+      </div>
+      <div class="flex items-center gap-3 text-slate-600 text-sm">
+        <span class="px-3 py-1 rounded-full bg-slate-100">✓ Checkout Hotmart</span>
+        <span class="px-3 py-1 rounded-full bg-slate-100">✓ Garantia 7 dias</span>
+        <span class="px-3 py-1 rounded-full bg-slate-100">✓ Acesso imediato</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- Por dentro do curso (prints dos módulos) -->
+  <section id="por-dentro" class="section max-w-6xl mx-auto px-4 py-16">
+    <h2 class="text-2xl md:text-4xl font-bold">Por dentro do iPrático</h2>
+    <p class="mt-2 text-slate-700">Veja como é a área de membros por dentro. Carregue imagens via URL (parâmetros <span class="font-mono">?img1=...&img2=...&img3=...</span>) ou por upload local.</p>
+    <div class="mt-8 grid md:grid-cols-3 gap-6">
+      <div class="rounded-2xl overflow-hidden bg-white shadow border border-slate-100">
+        <img id="img-1" class="w-full h-56 object-cover" src="https://images.unsplash.com/photo-1524995997946-a1c2e315a42f?w=800&q=80&auto=format&fit=crop" alt="Módulos iPrático" />
+        <div class="p-3 bg-slate-50 border-t border-slate-100 flex items-center justify-between">
+          <span class="text-sm text-slate-600">Carregar imagem 1</span>
+          <div class="flex gap-2">
+            <input id="file-img1" type="file" accept="image/*" class="hidden" />
+            <button type="button" id="btn-img1" class="px-3 py-1 rounded bg-sky-600 text-white text-sm">Selecionar</button>
+          </div>
+        </div>
+      </div>
+      <div class="rounded-2xl overflow-hidden bg-white shadow border border-slate-100">
+        <img id="img-2" class="w-full h-56 object-cover" src="https://images.unsplash.com/photo-1515165562835-c3b8c2e0f66e?w=800&q=80&auto=format&fit=crop" alt="Aulas e materiais" />
+        <div class="p-3 bg-slate-50 border-t border-slate-100 flex items-center justify-between">
+          <span class="text-sm text-slate-600">Carregar imagem 2</span>
+          <div class="flex gap-2">
+            <input id="file-img2" type="file" accept="image/*" class="hidden" />
+            <button type="button" id="btn-img2" class="px-3 py-1 rounded bg-sky-600 text-white text-sm">Selecionar</button>
+          </div>
+        </div>
+      </div>
+      <div class="rounded-2xl overflow-hidden bg-white shadow border border-slate-100">
+        <img id="img-3" class="w-full h-56 object-cover" src="https://images.unsplash.com/photo-1551867852-9d80f93d3512?w=800&q=80&auto=format&fit=crop" alt="Exercícios e drills" />
+        <div class="p-3 bg-slate-50 border-t border-slate-100 flex items-center justify-between">
+          <span class="text-sm text-slate-600">Carregar imagem 3</span>
+          <div class="flex gap-2">
+            <input id="file-img3" type="file" accept="image/*" class="hidden" />
+            <button type="button" id="btn-img3" class="px-3 py-1 rounded bg-sky-600 text-white text-sm">Selecionar</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Depoimentos -->
+  <section id="depoimentos" class="section bg-white/70 border-y border-slate-200">
+    <div class="max-w-6xl mx-auto px-4 py-16">
+      <h2 class="text-2xl md:text-4xl font-bold">Resultados de alunos</h2>
+      <div class="mt-8 grid md:grid-cols-3 gap-6">
+        <figure class="p-6 rounded-2xl bg-white shadow border border-slate-100">
+          <blockquote class="text-slate-800">“Em 2 semanas parei de travar nas reuniões.”</blockquote>
+          <figcaption class="mt-3 text-sm text-slate-600">Ana, SP</figcaption>
+        </figure>
+        <figure class="p-6 rounded-2xl bg-white shadow border border-slate-100">
+          <blockquote class="text-slate-800">“Passei a usar frases úteis no trabalho todo dia.”</blockquote>
+          <figcaption class="mt-3 text-sm text-slate-600">Rafael, RJ</figcaption>
+        </figure>
+        <figure class="p-6 rounded-2xl bg-white shadow border border-slate-100">
+          <blockquote class="text-slate-800">“O passo a passo é leve e direto ao ponto.”</blockquote>
+          <figcaption class="mt-3 text-sm text-slate-600">Bianca, PR</figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <!-- Galeria de vídeos (opcional) -->
+  <section id="midias" class="section max-w-6xl mx-auto px-4 py-12">
+    <h2 class="text-2xl md:text-4xl font-bold">Veja também</h2>
+    <p class="mt-2 text-slate-700">Mais criativos curtos (15–20s). Ative via parâmetros <span class="font-mono">?v2=URL&v3=URL</span>.</p>
+    <div class="mt-6 grid md:grid-cols-2 gap-6">
+      <div class="rounded-2xl overflow-hidden shadow bg-black">
+        <video id="video-2" class="w-full h-full" playsinline controls preload="metadata"></video>
+        <div class="p-3 bg-slate-900/70 text-white text-sm flex items-center justify-between">
+          <span>Carregar vídeo 2</span>
+          <div class="flex gap-2">
+            <input id="file-v2" type="file" accept="video/mp4,video/webm" class="hidden" />
+            <button type="button" id="btn-v2" class="px-3 py-1 rounded bg-sky-600 hover:bg-sky-700">Selecionar arquivo</button>
+          </div>
+        </div>
+      </div>
+      <div class="rounded-2xl overflow-hidden shadow bg-black">
+        <video id="video-3" class="w-full h-full" playsinline controls preload="metadata"></video>
+        <div class="p-3 bg-slate-900/70 text-white text-sm flex items-center justify-between">
+          <span>Carregar vídeo 3</span>
+          <div class="flex gap-2">
+            <input id="file-v3" type="file" accept="video/mp4,video/webm" class="hidden" />
+            <button type="button" id="btn-v3" class="px-3 py-1 rounded bg-sky-600 hover:bg-sky-700">Selecionar arquivo</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Pricing -->
+  <section id="precos" class="section max-w-6xl mx-auto px-4 py-16">
+    <h2 class="text-2xl md:text-4xl font-bold">Escolha seu acesso</h2>
+    <div class="mt-8 grid md:grid-cols-2 gap-6">
+      <!-- Curso completo -->
+      <div class="relative p-6 rounded-3xl bg-white shadow-xl border border-slate-100">
+        <div class="absolute -top-3 right-6 px-3 py-1 rounded-full bg-sky-600 text-white text-xs">Mais escolhido</div>
+        <h3 class="text-xl font-bold">iPrático — Curso Completo</h3>
+        <p class="mt-2 text-slate-700">Acesso total, atualizações e materiais de apoio.</p>
+        <p class="mt-4 text-3xl font-extrabold">R$ <span id="preco-curso">197</span><span class="text-base font-medium text-slate-500"> em até 12x</span></p>
+        <ul class="mt-4 space-y-2 text-slate-800">
+          <li>✅ Aulas + materiais</li>
+          <li>✅ Suporte plataforma</li>
+          <li>✅ Garantia 7 dias</li>
+        </ul>
+        <a id="btn-curso" href="#" class="mt-6 inline-flex w-full justify-center items-center gap-2 bg-sky-600 hover:bg-sky-700 text-white px-4 py-3 rounded-2xl font-semibold shadow">Garantir minha vaga</a><p class="mt-2 text-xs text-slate-500">Compra finalizada no checkout Hotmart. <strong>O preço oficial é definido pelo produtor e pode variar</strong> — o valor final aparece no checkout.</p>
+      </div>
+      <!-- Acesso completo -->
+      <div class="p-6 rounded-3xl bg-white shadow-xl border border-slate-100">
+        <h3 class="text-xl font-bold">iPrático — Acesso Completo</h3>
+        <p class="mt-2 text-slate-700">Acesso contínuo e futuros conteúdos durante a vigência.</p>
+        <p class="mt-4 text-3xl font-extrabold">R$ <span id="preco-assinatura">197</span><span class="text-base font-medium text-slate-500"> em até 12x</span></p>
+        <ul class="mt-4 space-y-2 text-slate-800">
+          <li>✅ Atualizações incluídas</li>
+          <li>✅ Área de membros</li>
+          <li>✅ Garantia 7 dias</li>
+        </ul>
+        <a id="btn-assinatura" href="#" class="mt-6 inline-flex w-full justify-center items-center gap-2 bg-slate-900 hover:bg-black text-white px-4 py-3 rounded-2xl font-semibold shadow">Assinar agora</a><p class="mt-2 text-xs text-slate-500">Compra finalizada no checkout Hotmart. <strong>O preço oficial é definido pelo produtor e pode variar</strong> — o valor final aparece no checkout.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section id="faq" class="section bg-white/70 border-y border-slate-200">
+    <div class="max-w-6xl mx-auto px-4 py-16">
+      <h2 class="text-2xl md:text-4xl font-bold">Perguntas frequentes</h2>
+      <div class="mt-8 grid md:grid-cols-2 gap-6">
+        <div class="p-6 rounded-2xl bg-white shadow border border-slate-100">
+          <h3 class="font-semibold">Preciso saber inglês?</h3>
+          <p class="mt-2 text-slate-700">Não. O curso parte do básico e progride até o intermediário com foco em fala.</p>
+        </div>
+        <div class="p-6 rounded-2xl bg-white shadow border border-slate-100">
+          <h3 class="font-semibold">Quanto tempo por dia?</h3>
+          <p class="mt-2 text-slate-700">Recomendamos 15–20 minutos/dia, com plano semanal simples.</p>
+        </div>
+        <div class="p-6 rounded-2xl bg-white shadow border border-slate-100">
+          <h3 class="font-semibold">Tem garantia?</h3>
+          <p class="mt-2 text-slate-700">Sim, 7 dias para testar. Se não curtir, cancele sem burocracia.</p>
+        </div>
+        <div class="p-6 rounded-2xl bg-white shadow border border-slate-100">
+          <h3 class="font-semibold">Como recebo acesso?</h3>
+          <p class="mt-2 text-slate-700">O acesso é imediato após a confirmação do pagamento, via plataforma.</p>
+        </div>
+      </div>
+      <div class="mt-10 text-center">
+        <a href="#precos" class="inline-flex items-center gap-2 bg-sky-600 hover:bg-sky-700 text-white px-6 py-3 rounded-2xl shadow font-semibold">Quero começar agora</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Sticky CTA -->
+  <div class="fixed bottom-4 left-1/2 -translate-x-1/2 z-40">
+    <div class="glass rounded-2xl shadow-xl px-4 py-3 flex items-center gap-4">
+      <span class="hidden sm:block text-sm">Compra protegida pela Hotmart • Garantia 7 dias</span>
+      <a href="#precos" class="bg-sky-600 hover:bg-sky-700 text-white px-4 py-2 rounded-xl font-semibold">Comprar agora</a>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="py-10 text-center text-sm text-slate-500">
+    <div class="max-w-6xl mx-auto px-4">
+      <p>© <span id="ano"></span> iPrático — Página de Afiliado. Não somos os responsáveis pelo produto. Suporte e entrega pelo produtor/plataforma.</p>
+      <p class="mt-2">Política de Privacidade • Termos • Contato</p>
+    </div>
+  </footer>
+
+  <!-- Optional debug panel (enable with ?debug=1) -->
+  <section id="debug-panel" class="max-w-6xl mx-auto px-4 py-6 mt-6 mb-10 rounded-2xl bg-yellow-50 border border-yellow-200" hidden>
+    <div class="flex items-center gap-2 mb-3"><span class="badge bg-yellow-200 text-yellow-900">DEBUG</span><h3 class="font-bold">Autotestes</h3></div>
+    <ul id="debug-list" class="list-disc pl-5 text-sm text-slate-800"></ul>
+  </section>
+
+  <script>
+    'use strict';
+
+    // ===== Configurações rápidas =====
+    // Substitua pelos SEUS hotlinks de afiliado (da Hotmart/Kiwify)
+    const HOTLINK_CURSO = 'https://go.hotmart.com/V102601871V?dp=1';
+    const HOTLINK_ASSINATURA = 'https://go.hotmart.com/V102601871V?dp=1';
+
+    // Valores de referência (você pode ajustar via URL params)
+    let precoCurso = '197';
+    let precoAssinatura = '197';
+
+    // ===== Util =====
+    const qs = new URLSearchParams(location.search);
+    const utm = ['utm_source','utm_medium','utm_campaign','utm_content','utm_term']
+      .map(k => qs.get(k) ? `${k}=${encodeURIComponent(qs.get(k))}` : null)
+      .filter(Boolean)
+      .join('&');
+
+    const withUTM = (base) => {
+      if (!base) return '#';
+      if (!utm) return base;
+      return base + (base.includes('?') ? '&' : '?') + utm;
+    };
+
+    // ===== Helpers robustos =====
+    const $ = (id) => document.getElementById(id);
+    const setText = (id, text) => { const el = $(id); if (el) el.textContent = text; else console.warn(`[LP] Elemento #${id} não encontrado`); };
+
+    const applyHeadlineVariant = () => {
+      if (qs.get('h') === 'B') {
+        const el = $('headline');
+        if (el) el.textContent = 'Trava na hora de falar? Destrave em 30 dias com rotina de 15–20 min/dia';
+      }
+    };
+
+    const applyPrices = () => {
+      if (qs.get('pc')) precoCurso = qs.get('pc');
+      if (qs.get('pa')) precoAssinatura = qs.get('pa');
+      setText('preco-curso', precoCurso);
+      setText('preco-assinatura', precoAssinatura);
+    };
+
+    const applyHotlinks = () => {
+      const btnCurso = $('btn-curso');
+      const btnAss = $('btn-assinatura');
+      if (btnCurso) btnCurso.href = withUTM(HOTLINK_CURSO);
+      if (btnAss) btnAss.href = withUTM(HOTLINK_ASSINATURA);
+    };
+
+    const applyYear = () => setText('ano', new Date().getFullYear());
+
+    // ===== Autotestes (executa sempre; UI aparece com ?debug=1) =====
+    const tests = [];
+    const assert = (name, cond) => { tests.push({ name, pass: !!cond }); if (!cond) console.warn('TEST FAIL:', name); };
+    const renderDebug = () => {
+      if (qs.get('debug') === '1') {
+        const panel = $('debug-panel');
+        const list = $('debug-list');
+        if (panel && list) {
+          panel.hidden = false;
+          list.innerHTML = tests.map(t => `<li>${t.pass ? '✅' : '❌'} ${t.name}</li>`).join('');
+        }
+      }
+    };
+
+    document.addEventListener('DOMContentLoaded', () => {
+      // Aplicações principais
+      applyHeadlineVariant();
+      applyPrices();
+      applyHotlinks();
+      applyYear();
+
+      // Testes básicos
+      assert('#headline existe', !!$('headline'));
+      assert('#preco-curso existe', !!$('preco-curso'));
+      assert('#preco-assinatura existe', !!$('preco-assinatura'));
+      assert('#btn-curso existe', !!$('btn-curso'));
+      assert('#btn-assinatura existe', !!$('btn-assinatura'));
+      assert('#ano preenchido', !!$('ano'));
+      const testUrl = withUTM('https://exemplo.com/checkout');
+      assert('withUTM retorna string', typeof testUrl === 'string' && testUrl.length > 0);
+
+      renderDebug();
+
+      // ===== Imagens via URL (?img1, ?img2, ?img3) e upload local =====
+      const setImgUrl = (id, url) => { const el = $(id); if (!el || !url) return; el.src = url; };
+      setImgUrl('img-1', qs.get('img1'));
+      setImgUrl('img-2', qs.get('img2'));
+      setImgUrl('img-3', qs.get('img3'));
+
+      const bindImgUploader = (btnId, fileId, imgId) => {
+        const btn = $(btnId); const file = $(fileId); const img = $(imgId);
+        if (!btn || !file || !img) return;
+        btn.addEventListener('click', () => file.click());
+        file.addEventListener('change', () => {
+          const f = file.files && file.files[0];
+          if (!f) return;
+          const url = URL.createObjectURL(f);
+          img.src = url;
+        });
+      };
+      bindImgUploader('btn-img1','file-img1','img-1');
+      bindImgUploader('btn-img2','file-img2','img-2');
+      bindImgUploader('btn-img3','file-img3','img-3');
+
+      // ===== Autoplay padrão se existir v1 =====
+      const v1Url = qs.get('v1');
+      if (v1Url) {
+        const el = $('video-1');
+        if (el) { el.muted = true; el.play().catch(()=>{}); }
+      }
+
+      // ===== Suporte a vídeos via URL (?v1, ?v2, ?v3) e via upload local =====
+      const setVideoUrl = (id, url) => {
+        const el = $(id);
+        if (!el || !url) return;
+        el.innerHTML = '';
+        const src = document.createElement('source');
+        src.src = url;
+        src.type = url.endsWith('.webm') ? 'video/webm' : 'video/mp4';
+        el.appendChild(src);
+        el.load();
+      };
+      // URLs por parâmetro
+      setVideoUrl('video-1', qs.get('v1'));
+      setVideoUrl('video-2', qs.get('v2'));
+      setVideoUrl('video-3', qs.get('v3'));
+
+      // Upload local (client-side)
+      const bindUploader = (btnId, fileId, videoId) => {
+        const btn = $(btnId); const file = $(fileId); const vid = $(videoId);
+        if (!btn || !file || !vid) return;
+        btn.addEventListener('click', () => file.click());
+        file.addEventListener('change', () => {
+          const f = file.files && file.files[0];
+          if (!f) return;
+          const url = URL.createObjectURL(f);
+          setVideoUrl(videoId, url);
+        });
+      };
+      bindUploader('btn-v1','file-v1','video-1');
+      bindUploader('btn-v2','file-v2','video-2');
+      bindUploader('btn-v3','file-v3','video-3');
+
+      // Autoplay silencioso opcional: ?autoplay=1
+      if (qs.get('autoplay') === '1') {
+        const v = $('video-1');
+        if (v) { v.muted = true; v.play().catch(()=>{}); }
+      }
+    });
+  </script>
+
+  <!-- Pixels (cole os códigos oficiais abaixo) -->
+  <!-- Meta Pixel / GA4 / etc. -->
+
+</body>
+</html>
