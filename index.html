@@ -59,6 +59,14 @@
     </div>
   </header>
 
+  <!-- Oferta dinâmica / Prova -->
+  <div id="offer-bar" class="w-full bg-red-50 border-y border-red-200 text-red-900">
+    <div class="max-w-6xl mx-auto px-4 py-2 text-sm flex items-center justify-between">
+      <span id="offer-text" class="font-medium">Preço atual no checkout: R$ 197 • Teste 7 dias sem risco</span>
+      <a href="#precos" class="inline-flex items-center gap-2 px-3 py-1 rounded bg-red-600 hover:bg-red-700 text-white">Garantir agora</a>
+    </div>
+  </div>
+
   <!-- Hero -->
   <section class="relative">
     <img class="absolute inset-0 w-full h-full object-cover opacity-20" src="https://images.unsplash.com/photo-1491841651911-c44c30c34548?q=80&w=1920&auto=format&fit=crop" alt="" />
@@ -202,7 +210,7 @@
     <p class="mt-2 text-slate-700">Veja como é a área de membros por dentro. Carregue imagens via URL (parâmetros <span class="font-mono">?img1=...&img2=...&img3=...</span>) ou por upload local.</p>
     <div class="mt-8 grid md:grid-cols-3 gap-6">
       <div class="rounded-2xl overflow-hidden bg-white shadow border border-slate-100">
-        <img id="img-1" class="w-full h-56 object-cover" src="https://images.unsplash.com/photo-1524995997946-a1c2e315a42f?w=800&q=80&auto=format&fit=crop" alt="Módulos iPrático" />
+        <img loading="lazy" id="img-1" class="w-full h-56 object-cover" src="https://images.unsplash.com/photo-1524995997946-a1c2e315a42f?w=800&q=80&auto=format&fit=crop" alt="Módulos iPrático" />
         <div class="p-3 bg-slate-50 border-t border-slate-100 flex items-center justify-between">
           <span class="text-sm text-slate-600">Carregar imagem 1</span>
           <div class="flex gap-2">
@@ -212,7 +220,7 @@
         </div>
       </div>
       <div class="rounded-2xl overflow-hidden bg-white shadow border border-slate-100">
-        <img id="img-2" class="w-full h-56 object-cover" src="https://images.unsplash.com/photo-1515165562835-c3b8c2e0f66e?w=800&q=80&auto=format&fit=crop" alt="Aulas e materiais" />
+        <img loading="lazy" id="img-2" class="w-full h-56 object-cover" src="https://images.unsplash.com/photo-1515165562835-c3b8c2e0f66e?w=800&q=80&auto=format&fit=crop" alt="Aulas e materiais" />
         <div class="p-3 bg-slate-50 border-t border-slate-100 flex items-center justify-between">
           <span class="text-sm text-slate-600">Carregar imagem 2</span>
           <div class="flex gap-2">
@@ -222,7 +230,7 @@
         </div>
       </div>
       <div class="rounded-2xl overflow-hidden bg-white shadow border border-slate-100">
-        <img id="img-3" class="w-full h-56 object-cover" src="https://images.unsplash.com/photo-1551867852-9d80f93d3512?w=800&q=80&auto=format&fit=crop" alt="Exercícios e drills" />
+        <img loading="lazy" id="img-3" class="w-full h-56 object-cover" src="https://images.unsplash.com/photo-1551867852-9d80f93d3512?w=800&q=80&auto=format&fit=crop" alt="Exercícios e drills" />
         <div class="p-3 bg-slate-50 border-t border-slate-100 flex items-center justify-between">
           <span class="text-sm text-slate-600">Carregar imagem 3</span>
           <div class="flex gap-2">
@@ -343,6 +351,9 @@
           <li>✅ Suporte plataforma</li>
           <li>✅ Garantia 7 dias</li>
         </ul>
+        <div class="mt-3 text-xs text-slate-500">
+          Cartões em até 12x • Pix • Boleto — processado pela Hotmart
+        </div>
         <a id="btn-curso" href="#" class="mt-6 inline-flex w-full justify-center items-center gap-2 bg-red-600 hover:bg-red-700 text-white px-4 py-3 rounded-2xl font-semibold shadow">Garantir minha vaga</a><p class="mt-2 text-xs text-slate-500">Compra finalizada no checkout Hotmart. <strong>O preço oficial é definido pelo produtor e pode variar</strong> — o valor final aparece no checkout.</p>
       </div>
       <!-- Acesso completo -->
@@ -355,6 +366,9 @@
           <li>✅ Área de membros</li>
           <li>✅ Garantia 7 dias</li>
         </ul>
+        <div class="mt-3 text-xs text-slate-500">
+          Cartões em até 12x • Pix • Boleto — processado pela Hotmart
+        </div>
         <a id="btn-assinatura" href="#" class="mt-6 inline-flex w-full justify-center items-center gap-2 bg-slate-900 hover:bg-black text-white px-4 py-3 rounded-2xl font-semibold shadow">Assinar agora</a><p class="mt-2 text-xs text-slate-500">Compra finalizada no checkout Hotmart. <strong>O preço oficial é definido pelo produtor e pode variar</strong> — o valor final aparece no checkout.</p>
       </div>
     </div>
@@ -410,6 +424,13 @@
     <ul id="debug-list" class="list-disc pl-5 text-sm text-slate-800"></ul>
   </section>
 
+  <!-- Scroll CTA (surge após ~60% da página) -->
+  <div id="scroll-cta" class="fixed bottom-20 left-1/2 -translate-x-1/2 z-40 hidden">
+    <a href="#precos" class="px-5 py-3 rounded-2xl bg-red-600 hover:bg-red-700 text-white font-semibold shadow-xl">
+      Ir para o checkout
+    </a>
+  </div>
+
   <script>
     'use strict';
 
@@ -438,6 +459,38 @@
     function toDrivePreview(url) {
       if (!url) return '';
       return url.replace('/view', '/preview');
+    }
+
+    // --- Oferta dinâmica (usa ?preco= e ?msg=) ---
+    function setOfferBar() {
+      const priceParam = qs.get('preco'); // ex.: ?preco=197
+      const msgParam = qs.get('msg');     // ex.: ?msg=Teste%207%20dias%20sem%20risco
+      const text = document.getElementById('offer-text');
+      if (!text) return;
+      const precoTexto = priceParam ? `R$ ${priceParam}` : `R$ ${precoCurso}`;
+      const msgTexto = msgParam ? decodeURIComponent(msgParam) : 'Teste 7 dias sem risco';
+      text.textContent = `Preço atual no checkout: ${precoTexto} • ${msgTexto}`;
+    }
+
+    // --- Plano único (esconde segundo card com ?oneplan=1) ---
+    function maybeSinglePlan() {
+      if (qs.get('oneplan') === '1') {
+        const secondCard = document.querySelector('#precos .grid > :nth-child(2)');
+        if (secondCard) secondCard.remove();
+      }
+    }
+
+    // --- Scroll CTA (mostra ao rolar 60% da página) ---
+    function bindScrollCTA() {
+      const el = document.getElementById('scroll-cta');
+      if (!el) return;
+      const onScroll = () => {
+        const scrolled = (window.scrollY + window.innerHeight) / document.body.scrollHeight;
+        if (scrolled > 0.6) { el.classList.remove('hidden'); }
+        else { el.classList.add('hidden'); }
+      };
+      document.addEventListener('scroll', onScroll, { passive: true });
+      onScroll();
     }
 
     // ===== Helpers robustos =====
@@ -484,6 +537,7 @@
     document.addEventListener('DOMContentLoaded', () => {
       const storiesOff = qs.get('stories') === 'off';
       const depoOff = qs.get('depo') === 'off';
+      const singlePlan = qs.get('oneplan') === '1';
 
       if (storiesOff) {
         const s = $('stories'); if (s) s.remove();
@@ -497,13 +551,16 @@
       applyPrices();
       applyHotlinks();
       applyYear();
+      setOfferBar();
+      maybeSinglePlan();
+      bindScrollCTA();
 
       // Testes básicos
       assert('#headline existe', !!$('headline'));
       assert('#preco-curso existe', !!$('preco-curso'));
-      assert('#preco-assinatura existe', !!$('preco-assinatura'));
+      assert('#preco-assinatura existe', singlePlan || !!$('preco-assinatura'));
       assert('#btn-curso existe', !!$('btn-curso'));
-      assert('#btn-assinatura existe', !!$('btn-assinatura'));
+      assert('#btn-assinatura existe', singlePlan || !!$('btn-assinatura'));
       assert('#ano preenchido', !!$('ano'));
       const testUrl = withUTM('https://exemplo.com/checkout');
       assert('withUTM retorna string', typeof testUrl === 'string' && testUrl.length > 0);
